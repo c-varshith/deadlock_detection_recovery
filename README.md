@@ -12,6 +12,7 @@
 <p align="center">
    <a href="https://github.com/c-varshith/deadlock_detection_recovery"><img src="https://img.shields.io/badge/GitHub-Source%20repo-111827?style=for-the-badge&logo=github&logoColor=white" alt="Source repo" /></a>
    <a href="#features"><img src="https://img.shields.io/badge/Features-DFS%20%7C%20FW%20%7C%20Dijkstra-0EA5E9?style=for-the-badge&labelColor=111827" alt="Features" /></a>
+   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-111827?style=for-the-badge" alt="MIT license" /></a>
 </p>
 
 <p align="center">
@@ -167,4 +168,8 @@ Contributions welcome. Please open an issue for major changes and submit PRs wit
 
 ## License
 
-This project does not include a `LICENSE` file yet. Add `LICENSE` to declare terms (MIT recommended for open-source demos).
+This project is licensed under the [MIT License](./LICENSE).
+
+Copyright (c) 2026 Varshith C
+
+See [LICENSE](./LICENSE) for the full license text.
