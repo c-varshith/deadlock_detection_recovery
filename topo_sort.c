@@ -48,7 +48,7 @@ void topo_sort_check(const Graph *g)
     print_banner("TOPOLOGICAL SORT CHECK (KAHN'S ALGORITHM)");
     printf("  Algorithm : Kahn's BFS-based topological sort\n");
     printf("  Complexity : Time O(V+E)  |  Space O(V)\n");
-    printf("  Principle  : Topo-sort succeeds ⟺ graph is a DAG ⟺ no deadlock\n\n");
+    printf("  Principle  : Topo-sort succeeds <=> graph is a DAG <=> no deadlock\n\n");
 
     if (!g->wfg_built) {
         printf("  [!] WFG not built. Run option 6 first.\n\n");
@@ -119,13 +119,11 @@ void topo_sort_check(const Graph *g)
     if (ord_len == n) {
         printf("  ✔  Topological ordering COMPLETE.\n");
         printf("  ✔  All %d processes ordered → Graph is a DAG.\n", n);
-        printf("  ✔  No cycle → No deadlock detected by topo sort.\n");
+        printf("  ✔  No cycle -> No deadlock detected by topo sort.\n");
     } else {
-        printf("  ╔══════════════════════════════════════════════════╗\n");
-        printf("  ║  ⚠  TOPOLOGICAL ORDERING NOT POSSIBLE           ║\n");
-        printf("  ║     Graph contains a cycle.                      ║\n");
-        printf("  ║     Potential deadlock exists!                   ║\n");
-        printf("  ╚══════════════════════════════════════════════════╝\n");
+        print_banner("TOPOLOGICAL ORDERING NOT POSSIBLE");
+        printf("  Graph contains a cycle.\n");
+        printf("  Potential deadlock exists!\n");
         printf("\n  Unschedulable processes (still have in-degree > 0):\n");
         for (int i = 0; i < n; i++) {
             if (in_degree[i] > 0)

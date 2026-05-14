@@ -273,9 +273,7 @@ void dijkstra_recovery(Graph *g)
 
     /* ── Summary ────────────────────────────────────────────── */
     print_separator();
-    printf("\n  ╔══════════════════════════════════════════╗\n");
-    printf("    ║          RECOVERY SUMMARY                ║\n");
-    printf("    ╚══════════════════════════════════════════╝\n");
+    print_banner("RECOVERY SUMMARY");
     printf("  Recovery rounds       : %d\n", round);
     printf("  Processes terminated  : %d\n", num_victims);
     printf("  Total recovery cost   : %d\n", total_cost);

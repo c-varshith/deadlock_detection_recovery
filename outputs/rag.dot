@@ -6,11 +6,23 @@ digraph RAG {
     node  [fontname="Helvetica", fontsize=11];
 
     // Processes
+    P0 [label="P0\n(Alpha)\ncost=4", shape=ellipse, style=filled, fillcolor="#AED6F1"];
+    P1 [label="P1\n(Beta)\ncost=2", shape=ellipse, style=filled, fillcolor="#AED6F1"];
+    P2 [label="P2\n(Gamma)\ncost=7", shape=ellipse, style=filled, fillcolor="#AED6F1"];
 
     // Resources
+    R0 [label="R0\n(CPU)\n0/1", shape=box, style=filled, fillcolor="#A9DFBF"];
+    R1 [label="R1\n(Disk)\n1/1", shape=box, style=filled, fillcolor="#A9DFBF"];
+    R2 [label="R2\n(Net)\n0/1", shape=box, style=filled, fillcolor="#A9DFBF"];
 
     // Allocation edges (R -> P)
+    R0 -> P0 [label="1", color="#27AE60", penwidth=2];
+    R2 -> P2 [label="1", color="#27AE60", penwidth=2];
 
     // Request edges (P -> R)
+    P0 -> R1 [label="1", style=dashed, color="#E74C3C", penwidth=2];
+    P2 -> R0 [label="1", style=dashed, color="#E74C3C", penwidth=2];
 
+    // Wait-For edges (WFG overlay)
+    P2 -> P0 [label="waits", style=bold, color="#8E44AD", constraint=false];
 }

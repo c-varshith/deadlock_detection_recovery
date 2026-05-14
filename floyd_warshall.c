@@ -30,8 +30,8 @@
    ───────────────────────────────────────────────────────────── */
 void floyd_warshall(const Graph *g)
 {
-    print_banner("FLOYD–WARSHALL DEADLOCK VERIFICATION");
-    printf("  Algorithm : Floyd–Warshall Transitive Closure\n");
+    print_banner("FLOYD-WARSHALL DEADLOCK VERIFICATION");
+    printf("  Algorithm : Floyd-Warshall Transitive Closure\n");
     printf("  Complexity : Time O(V³)  |  Space O(V²)\n");
     printf("  V = %d processes\n\n", g->num_processes);
 
@@ -88,18 +88,17 @@ void floyd_warshall(const Graph *g)
 
     printf("\n");
     if (found) {
-        printf("  ╔══════════════════════════════════════════════╗\n");
-        printf("  ║   ⚠   DEADLOCK CONFIRMED by Floyd–Warshall  ║\n");
-        printf("  ╚══════════════════════════════════════════════╝\n");
+        print_banner("DEADLOCK CONFIRMED");
+        printf("  Floyd-Warshall found a cycle in the WFG.\n");
 
         /* Also show all mutually-reachable pairs */
-        printf("\n  Reachability pairs (Pi → Pj, Pi ≠ Pj):\n");
+        printf("\n  Reachability pairs (Pi -> Pj, Pi != Pj):\n");
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++)
                 if (i != j && reach[i][j])
-                    printf("    P%d  ──reachable──▶  P%d\n", i, j);
+                    printf("    P%d  ->  P%d\n", i, j);
     } else {
-        printf("  ✔  No deadlock confirmed by Floyd–Warshall.\n");
+        printf("  ✔  No deadlock confirmed by Floyd-Warshall.\n");
     }
 
     printf("\n  Execution time : %ld μs\n\n", t_end - t_start);
