@@ -1,0 +1,8 @@
+digraph WFG {
+    graph [label="Wait-For Graph", fontsize=14];
+    P0 [label="P0\nP_A", shape=ellipse, style=filled, fillcolor="#AED6F1"];
+    P1 [label="P1\nP_B", shape=ellipse, style=filled, fillcolor="#AED6F1"];
+    P2 [label="P2\nP_C", shape=ellipse, style=filled, fillcolor="#AED6F1"];
+    P3 [label="P3\nP_D", shape=ellipse, style=filled, fillcolor="#AED6F1"];
+    P4 [label="P4\nP_E", shape=ellipse, style=filled, fillcolor="#AED6F1"];
+}

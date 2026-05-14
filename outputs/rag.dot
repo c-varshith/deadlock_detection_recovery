@@ -1,0 +1,16 @@
+// Deadlock Simulation — Resource Allocation Graph
+// Render: dot -Tpng outputs/rag.dot -o rag.png
+
+digraph RAG {
+    graph [rankdir=LR, fontname="Helvetica", label="Resource Allocation Graph", fontsize=14];
+    node  [fontname="Helvetica", fontsize=11];
+
+    // Processes
+
+    // Resources
+
+    // Allocation edges (R -> P)
+
+    // Request edges (P -> R)
+
+}

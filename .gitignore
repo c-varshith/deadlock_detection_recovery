@@ -1,0 +1,31 @@
+# Ignore common build artifacts and editor files
+*.o
+*.obj
+*.out
+*.exe
+deadlock_sim
+main
+a.out
+core
+
+# Backup and editor files
+*~
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+tmp/
+build/
+
+# Graphviz outputs and generated images (keep source DOT files tracked)
+*.png
+*.jpg
+*.svg
+
+# Coverage and test artifacts
+coverage/
+*.gcda
+*.gcno
